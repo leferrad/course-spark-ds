@@ -6,6 +6,8 @@ Resources for course: "Spark and Python for Data Science"
 
 **Docker**
 
+> TODO: links for installing Docker (Windows/Linux/MacOS)
+
 To run a Docker container to setup an environment ready to be used through Jupyter notebooks, follow these instructions:
 
 ```

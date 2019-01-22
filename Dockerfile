@@ -4,6 +4,8 @@ ENV WD /root
 
 WORKDIR ${WD}
 
+ADD . ${WD}
+
 # Install dependencies
 RUN apt update && \
 	apt install -y ant git nano python3-pip openjdk-8-jdk && \
@@ -24,7 +26,7 @@ RUN export JAVA_HOME
 RUN pip3 install --upgrade pip
 
 # Install mandatory Python dependencies for this environment
-RUN pip3 install -e requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Generate configuration files for Jupyter
 RUN jupyter notebook --generate-config
